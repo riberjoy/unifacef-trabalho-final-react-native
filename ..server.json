@@ -1,5 +1,18 @@
 {
-  "pedidos": [],
+  "pedidos": [
+    {
+      "userId": 1,
+      "userEmail": "joy@teste.com",
+      "items": [
+        {
+          "jogoId": 2,
+          "titulo": "DRAGON BALL Z: KAKAROT",
+          "valor": 81.68
+        }
+      ],
+      "id": 1
+    }
+  ],
   "users": [
     {
       "email": "joy@teste.com",

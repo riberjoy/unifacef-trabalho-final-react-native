@@ -14,6 +14,8 @@ import {TabNavScreenNavigationProp} from "../../Routes/PrivateNavigation";
 import {useCarrinhoStore} from '../../store/Carrinho';
 import {useMyTheme} from '../../hooks/Theme.hooks';
 import {BUTTON_CARD_HEIGHT} from '../../components/ButtonCard/styles';
+import { useHistoricoStore } from '../../store/Historico';
+import { useAuth } from '../../hooks/Auth.hooks';
 
 
 interface ItensProps {
@@ -33,6 +35,9 @@ export const Listagem: React.FC = () => {
     const [last, setLast] = useState<boolean>(false)
     const toast = useToast()
     const {theme} = useMyTheme()
+    const {user} = useAuth()
+    const {loadData} = useHistoricoStore()
+
     const getData = async (pageNumber=1)=>{
         setPage(pageNumber + 1);
         if(!last||pageNumber===1){
@@ -51,7 +56,7 @@ export const Listagem: React.FC = () => {
                 }
 
                 if(response.data.length===0) setLast(true)
-            } catch (e) {
+            } catch (e: any) {
                 toast.show({
                     placement: "top-right",
                     render:({id})=>{
@@ -78,6 +83,9 @@ export const Listagem: React.FC = () => {
     }
     useEffect(()=>{
         getData(1)
+        if (user) {
+            loadData(user.id, user.email)
+        }
     },[])
 
     const navigation = useNavigation<TabNavScreenNavigationProp>()
