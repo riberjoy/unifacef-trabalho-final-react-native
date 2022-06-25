@@ -129,17 +129,22 @@ export const Listagem: React.FC = () => {
                                 onChangeText={setPesquisa}
                                 value={pesquisa}
                                 color={'#FFF'}
-                                left={() => <FontAwesome name={`search`} size={26} color={theme.colors.primary} style={{ marginRight: 10, marginLeft: -5 }} />}
-                                rigth={() => 
-                                    (<FontAwesome name={`close`}
-                                        ize={26}
-                                        color={theme.colors.danger}
-                                        style={{ marginRight: -5, marginLeft: 10 }}
-                                        onPress={() => {
-                                            setPesquisaAtiva(false)
-                                            setPesquisa('')
-                                        }} 
-                                    />)
+                                left={() =>
+                                (<FontAwesome name={`search`}
+                                    size={26}
+                                    color={theme.colors.primary}
+                                    style={{ marginRight: 10, marginLeft: -5 }} />
+                                )}
+                                rigth={() =>
+                                (<FontAwesome name={`close`}
+                                    size={26}
+                                    color={theme.colors.danger}
+                                    style={{ marginRight: -5, marginLeft: 10 }}
+                                    onPress={() => {
+                                        setPesquisaAtiva(false)
+                                        setPesquisa('')
+                                    }}
+                                />)
                                 }
                             />
                         </Box>}
