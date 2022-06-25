@@ -2,7 +2,7 @@
 ###### Trabalho final para o modulo de React Native
 
 
-Para executar e efetuar testes, seguir os seguintes passos:
+Após clonar o projeto: 
 
 ```
 npm install
