@@ -11,6 +11,40 @@
         }
       ],
       "id": 1
+    },
+    {
+      "userId": 1,
+      "userEmail": "joy@teste.com",
+      "items": [
+        {
+          "jogoId": 3,
+          "titulo": "Cuphead",
+          "valor": 89.14
+        },
+        {
+          "jogoId": 4,
+          "titulo": "Crash Bandicoot™ N. Sane Trilogy",
+          "valor": 10.27
+        },
+        {
+          "jogoId": 6,
+          "titulo": "Spyro™ Reignited Trilogy",
+          "valor": 36.4
+        }
+      ],
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "userEmail": "joy@teste.com",
+      "items": [
+        {
+          "jogoId": 7,
+          "titulo": "Beat Saber",
+          "valor": 56.56
+        }
+      ],
+      "id": 3
     }
   ],
   "users": [

@@ -52,7 +52,7 @@ export const Detalhes: React.FC = () => {
     try {
       const response = await api.get<ItensProps>(`games/${route.params.id}`)
       if (!!response.data) setData(response.data)
-    } catch (e) {
+    } catch (e: any) {
       toast.show({
         placement: 'top-right',
         render: ({id}) => {
